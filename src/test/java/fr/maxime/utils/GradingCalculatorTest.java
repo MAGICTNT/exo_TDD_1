@@ -5,54 +5,92 @@ import org.junit.jupiter.api.Test;
 
 public class GradingCalculatorTest {
     private GradingCalculator calculator;
+    private int score;
+    private int attendancePercentage;
+    private char attenduValue;
+
 
     @Test
     public void TestGradingCalculator_score_95_attendance_90_thenResult_A() {
-        calculator = new GradingCalculator(95, 90);
+        score = 95;
+        attendancePercentage = 90;
+        attenduValue = 'A';
 
-        char attenduValue = 'A';
-        Assertions.assertEquals(attenduValue, calculator.getGrade());
+        calculator = new GradingCalculator(score, attendancePercentage);
+        char grade = calculator.getGrade();
+
+        Assertions.assertEquals(attenduValue, grade);
     }
     @Test
     public void TestGradingCalculator_score_85_attendance_90_thenResult_B() {
-        calculator = new GradingCalculator(85, 90);
-        char attenduValue = 'B';
-        Assertions.assertEquals(attenduValue, calculator.getGrade());
+        score = 85;
+        attendancePercentage = 90;
+        attenduValue = 'B';
+
+        calculator = new GradingCalculator(score, attendancePercentage);
+        char grade = calculator.getGrade();
+
+        Assertions.assertEquals(attenduValue, grade);
 
     }
     @Test
     public void TestGradingCalculator_score_65_attendance_90_thenResult_C() {
-        calculator = new GradingCalculator(65, 90);
-        char attenduValue = 'C';
-        Assertions.assertEquals(attenduValue, calculator.getGrade());
+        score = 65;
+        attendancePercentage = 90;
+        attenduValue = 'C';
+
+        calculator = new GradingCalculator(score, attendancePercentage);
+        char grade = calculator.getGrade();
+
+        Assertions.assertEquals(attenduValue, grade);
 
     }
     @Test
     public void TestGradingCalculator_score_95_attendance_65_thenResult_B() {
-        calculator = new GradingCalculator(95, 65);
-        char attenduValue = 'B';
-        Assertions.assertEquals(attenduValue, calculator.getGrade());
+        score = 95;
+        attendancePercentage = 65;
+        attenduValue = 'B';
+
+        calculator = new GradingCalculator(score, attendancePercentage);
+        char grade = calculator.getGrade();
+
+        Assertions.assertEquals(attenduValue, grade);
 
     }
     @Test
     public void TestGradingCalculator_score_95_attendance_55_thenResult_F() {
-        calculator = new GradingCalculator(95, 55);
-        char attenduValue = 'F';
-        Assertions.assertEquals(attenduValue, calculator.getGrade());
+        score = 95;
+        attendancePercentage = 55;
+        attenduValue = 'F';
+
+        calculator = new GradingCalculator(score, attendancePercentage);
+        char grade = calculator.getGrade();
+
+        Assertions.assertEquals(attenduValue, grade);
 
     }
     @Test
     public void TestGradingCalculator_score_65_attendance_55_thenResult_F() {
-        calculator = new GradingCalculator(65, 55);
-        char attenduValue = 'F';
-        Assertions.assertEquals(attenduValue, calculator.getGrade());
+        score = 65;
+        attendancePercentage = 55;
+        attenduValue = 'F';
+
+        calculator = new GradingCalculator(score, attendancePercentage);
+        char grade = calculator.getGrade();
+
+        Assertions.assertEquals(attenduValue, grade);
 
     }
     @Test
     public void TestGradingCalculator_score_50_attendance_90_thenResult_F() {
-        calculator = new GradingCalculator(50, 90);
-        char attenduValue = 'F';
-        Assertions.assertEquals(attenduValue, calculator.getGrade());
+        score = 50;
+        attendancePercentage = 90;
+        attenduValue = 'F';
+
+        calculator = new GradingCalculator(score, attendancePercentage);
+        char grade = calculator.getGrade();
+
+        Assertions.assertEquals(attenduValue, grade);
     }
 
 }
